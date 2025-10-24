@@ -24,6 +24,10 @@ class User(Base):
     referred_by_id = Column(BigInteger,
                             ForeignKey("users.user_id"),
                             nullable=True)
+    channel_subscription_verified = Column(Boolean, nullable=True)
+    channel_subscription_checked_at = Column(DateTime(timezone=True),
+                                             nullable=True)
+    channel_subscription_verified_for = Column(BigInteger, nullable=True)
 
     referrer = relationship("User", remote_side=[user_id], backref="referrals")
     subscriptions = relationship("Subscription",

@@ -1,7 +1,11 @@
 {
   "welcome": "Добро пожаловать, {user_name}!",
+  "channel_subscription_required": "Чтобы пользоваться ботом, подпишитесь на канал и нажмите \"Проверить подписку\".",
+  "channel_subscription_join_button": "Перейти в канал",
+  "channel_subscription_verify_button": "Проверить подписку",
+  "channel_subscription_check_failed": "Не удалось проверить подписку. Попробуйте позже или обратитесь в поддержку.",
+  "channel_subscription_verified_success": "✅ Подписка подтверждена! Можно продолжать.",
   "main_menu_greeting": "Привет, {user_name}! 👋\nЧто бы вы хотели сделать?",
-
   "menu_activate_trial_button": "🆓 Пробный период",
   "menu_subscribe_inline": "🚀 Купить",
   "menu_my_subscription_inline": "🔐 Моя подписка",
@@ -13,37 +17,53 @@
   "menu_server_status_button": "📊 Статус",
   "menu_support_button": "💬 Поддержка",
   "menu_terms_button": "📄 Условия сервиса",
-
   "back_to_main_menu_button": "⬅️ Назад",
-
   "choose_language": "Выберите язык / Select language:",
   "language_set_alert": "Язык изменен!",
-
   "error_occurred_try_again": "Произошла ошибка, попробуйте снова.",
   "error_try_again": "Попробуйте еще раз.",
   "error_displaying_menu": "Ошибка отображения меню.",
   "main_menu_unknown_action": "Неизвестное действие.",
-
   "select_subscription_period": "Выберите срок подписки:",
   "subscribe_for_months_button": "{months} мес. - {price} {currency_symbol}",
-
   "choose_payment_method": "Выберите способ оплаты:",
   "pay_button": "💳 Оплатить",
   "pay_with_yookassa_button": "💳 ЮKassa",
+  "yookassa_autopay_flow_prompt": "Автопродление включено. Выберите, как оплатить подписку:",
+  "yookassa_autopay_pay_saved_card_button": "💳 Оплата привязанной картой",
+  "yookassa_autopay_pay_new_card_button": "➕ Оплата новой картой",
+  "yookassa_autopay_choose_saved_card": "Выберите привязанную карту для списания:",
+  "yookassa_autopay_no_saved_cards": "Сохранённых карт нет. Оплатите новой картой или привяжите карту в разделе «Способы оплаты».",
+  "back_to_autopay_method_choice_button": "⬅️ Назад",
+  "yookassa_autopay_charge_initiated": "Запрос на списание с выбранной карты отправлен. Сообщим, как только платёж завершится.",
+  "pay_with_sbp_button": "📱 СБП",
+  "back_to_payment_methods_button": "⬅️ Назад",
   "pay_with_cryptopay_button": "💎 CryptoBot",
   "pay_with_tribute_button": "❤️ Tribute",
   "pay_with_stars_button": "🌟 Звезды Telegram",
   "connect_button": "🔗 Подключиться",
+
+  "devices_button": "📱 Мои устройства ({current_devices}/{max_devices})",
+  "my_devices_details": "📱 <b>Список ваших устройств ({current_devices}/{max_devices})</b>\n\n{devices}\n\nВы можете отключить устройство, выбрав его в списке ниже.\n<blockquote><i>Примечание: Если вы отключили устройство, оно будет автоматически подключено заново при следующем использовании. Перед удалением убедитесь, что вы удалили подписку из приложения.</i></blockquote>",
+  "no_devices_details_found_message": "📱 <b>Список ваших устройств</b>\n\nУ вас пока нет устройств.\nВам доступно {max_devices} устройств. Подключить их можно через кнопку \"🔗 Подключиться\" в меню подписки.",
+  "device_details": "{index}) <b>{device_model} ({platform} {os_version})</b>\nДата подключения: <b>{created_at_str}</b>\nUser Agent: <b>{user_agent}</b>\nHWID: <code>{hwid}</code>",
+  "disconnect_device_button": "🚫 Отключить {hwid} ({index})",
+  "device_disconnected": "Устройство успешно отключено.",
+  "no_devices_found": "Ошибка загрузки списка устройств.",
+  "devices_unlimited_label": "Без ограничений",
+  "my_devices_feature_disabled": "Раздел \"Мои устройства\" сейчас недоступен.",
+
   "cancel_button": "❌ Отмена",
   "payment_description_subscription": "Оплата подписки на {months} мес.",
   "payment_link_message": "Для оплаты подписки на {months} мес., нажмите кнопку ниже:",
+  "free_kassa_order_info": "Заказ №{order_id} от {date}",
+  "payment_invoice_sent_message": "Счёт Telegram Stars отправлен выше. Нажмите «Оплатить» или вернитесь к выбору способа ниже.",
   "payment_successful_error_details": "✅ Оплата прошла успешно, но возникла ошибка при отображении деталей. Ваша подписка активна. Свяжитесь с поддержкой, если что-то не так.",
   "payment_successful_full": "✅ Оплата прошла успешно!\nВаша подписка на {months} мес. активна до {end_date}.\n\nКлюч подключения:\n<code>{config_link}</code>\n\nЧтобы подключиться, перейдите по ссылке и следуйте инструкции 👇",
   "payment_successful_with_referral_bonus_full": "✅ Оплата прошла успешно!\nВаша подписка на {months} мес. (базовая дата окончания: {base_end_date}) продлена на {bonus_days} бонусных дней за приглашение от {inviter_name} и теперь активна до {final_end_date}.\n\nКлюч подключения:\n<code>{config_link}</code>\n\nЧтобы подключиться, перейдите по ссылке и следуйте инструкции 👇",
   "payment_failed": "❌ Оплата не удалась или была отменена. Пожалуйста, попробуйте еще раз или свяжитесь с поддержкой.",
   "config_link_not_available": "недоступна, обратитесь в поддержку",
   "traffic_unlimited": "Безлимитный",
-
   "promo_code_prompt": "Пожалуйста, введите ваш промокод:",
   "promo_code_not_found": "Промокод <code>{code}</code> не найден, истек или уже использован максимальное количество раз.",
   "promo_code_already_used_by_user": "Вы уже активировали промокод <code>{code}</code>.",
@@ -65,7 +85,6 @@
   "referral_bonus_inviter_notification_extended": "🎉 Поздравляем! Ваш друг {referee_name} оплатил подписку. Вам начислено {days} бонусных дней! Ваша подписка теперь активна до {new_end_date}.",
   "referral_bonus_inviter_notification_new_sub": "🎉 Поздравляем! Ваш друг {referee_name} оплатил подписку. Вам начислена бонусная подписка на {days} дней! Она активна до {new_end_date}.",
   "user_is_banned": "🚫 Ваш аккаунт заблокирован. Пожалуйста, свяжитесь со службой поддержки.",
-
   "admin_panel_title": "Панель администратора",
   "admin_stats_button": "📊 Статистика",
   "admin_broadcast_button": "📢 Рассылка",
@@ -131,6 +150,7 @@
   "admin_broadcast_cancelled": "Рассылка отменена.",
   "admin_broadcast_cancelled_alert": "Рассылка отменена!",
   "admin_broadcast_cancelled_nav_back": "Рассылка отменена. Вы возвращены в админ-панель.",
+  "broadcast_queue_result": "🚀 Рассылка поставлена в очередь!\n📤 В очередь добавлено: {sent_count}\n❌ Ошибок: {failed_count}\n\n📊 Статус очередей:\n👥 Очередь пользователей: {user_queue_size} сообщений\n📢 Очередь групп: {group_queue_size} сообщений\n\nℹ️ Сообщения будут отправлены автоматически с соблюдением лимитов Telegram.",
   "admin_promo_invalid_code_format": "Код должен быть от 3 до 30 символов и содержать только буквы и цифры.",
   "admin_promo_invalid_bonus_days": "Количество бонусных дней должно быть положительным числом.",
   "admin_promo_invalid_max_activations": "Максимальное количество активаций должно быть положительным числом.",
@@ -237,6 +257,7 @@
   "admin_user_invalid_days": "❌ Неверное количество дней. Введите число от 1 до 3650.",
   "admin_user_subscription_added_success": "✅ Успешно добавлено {days} дней подписки пользователю {user_id}",
   "admin_user_subscription_added_error": "❌ Ошибка добавления дней подписки",
+  "admin_panel_user_creation_failed": "❌ Не удалось создать или привязать пользователя в панели для ID {user_id}. Требуется ручная проверка.",
   "admin_user_ban_toggle_success": "✅ Пользователь {status}",
   "admin_user_ban_toggle_error": "❌ Ошибка изменения статуса блокировки",
   "admin_user_ban_success": "✅ Пользователь {input} заблокирован",
@@ -321,7 +342,6 @@
   "admin_user_subscription_active_until": "⏰ <b>Действует до:</b>",
   "admin_user_subscription_error": "Ошибка загрузки",
   "admin_promo_management_button": "🎟 Управление промокодами",
-
   "admin_promo_management_title": "🎟 <b>Управление промокодами</b>\n\nВыберите промокод для детального просмотра:",
   "admin_promo_management_empty": "📭 Промокоды отсутствуют",
   "admin_promo_card_title": "🎟 <b>Промокод: {code}</b>",
@@ -434,5 +454,6 @@
   "admin_ads_delete_button": "🗑 Удалить кампанию",
   "admin_ads_delete_confirm": "Вы уверены, что хотите удалить кампанию #{id}? Это действие необратимо.",
   "admin_ads_deleted_success": "Кампания удалена.",
-  "admin_ads_not_found": "Кампания не найдена."
+  "admin_ads_not_found": "Кампания не найдена.",
+  "free_kassa_order_full": "Заказ №{order_id} от {date}\n\n"
 }
