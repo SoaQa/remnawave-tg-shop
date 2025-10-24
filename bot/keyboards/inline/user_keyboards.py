@@ -45,10 +45,10 @@ def get_main_menu_inline_keyboard(
             InlineKeyboardButton(text=_(key="menu_server_status_button"),
                                  url=settings.SERVER_STATUS_URL))
 
-    if status_button_list:
-        builder.row(language_button, *status_button_list)
-    else:
-        builder.row(language_button)
+    # if status_button_list:
+    #     builder.row(language_button, *status_button_list)
+    # else:
+    #     builder.row(language_button)
 
     if settings.SUPPORT_LINK:
         builder.row(
