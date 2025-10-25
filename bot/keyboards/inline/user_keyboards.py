@@ -28,13 +28,13 @@ def get_main_menu_inline_keyboard(
         )
     )
 
-#   referral_button = InlineKeyboardButton(
-#       text=_(key="menu_referral_inline"),
-#       callback_data="main_action:referral")
-#   promo_button = InlineKeyboardButton(
-#       text=_(key="menu_apply_promo_button"),
-#       callback_data="main_action:apply_promo")
-#   builder.row(referral_button)
+    referral_button = InlineKeyboardButton(
+      text=_(key="menu_referral_inline"),
+      callback_data="main_action:referral")
+    promo_button = InlineKeyboardButton(
+      text=_(key="menu_apply_promo_button"),
+      callback_data="main_action:apply_promo")
+    builder.row(referral_button)
 
     language_button = InlineKeyboardButton(
         text=_(key="menu_language_settings_inline"),
@@ -45,10 +45,10 @@ def get_main_menu_inline_keyboard(
             InlineKeyboardButton(text=_(key="menu_server_status_button"),
                                  url=settings.SERVER_STATUS_URL))
 
-    # if status_button_list:
-    #     builder.row(language_button, *status_button_list)
-    # else:
-    #     builder.row(language_button)
+    if status_button_list:
+        builder.row(language_button, *status_button_list)
+    else:
+        builder.row(language_button)
 
     if settings.SUPPORT_LINK:
         builder.row(
